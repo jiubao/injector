@@ -18,7 +18,7 @@
  * todo: multi-providers for same name
  * todo: recursive dependent (circular dependent) (c-dep)
  *
- * c-dep: 
+ * c-dep:
  *		the c-dep should not be referenced during object creation phase
  * todo: catch execption, otherwise normal error will report c-dep.
  * todo: finish invoke
@@ -100,7 +100,7 @@ function createInjector(modules) {
 			if (!provider) {
 				throw "no provider: " + name;
 			}
-			
+
 			cache[name] = INSTANTIATING;
 			cache[name] = invoke(provider);
 
@@ -135,4 +135,3 @@ function createInjector(modules) {
 		put(arguments[0], provider);
 	}
 }
-
